@@ -29,11 +29,11 @@ class _StartScreenState extends State<StartScreen> {
     return Column(
       children: [
         Text(
-          '5 ml',
+          '0 ml',
           style: Theme.of(context).textTheme.headlineSmall,
         ),
         Text(
-          'Faltan 2500 ml',
+          'Faltan 2001 ml',
           style: Theme.of(context).textTheme.bodyMedium,
         )
       ],
@@ -44,23 +44,59 @@ class _StartScreenState extends State<StartScreen> {
     return Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Text(
-              '0 %',
-              style: Theme.of(context).textTheme.headlineSmall,
-            ),
-            Text(
-              '2.5',
-              style: Theme.of(context).textTheme.headlineSmall,
-            ),
+            _percentage(),
+            _smallDivider(),
+            _hydration(),
           ],
         );
+  }
+
+  Widget _percentage(){
+    return Column(
+      children: [
+        Stack(
+          alignment: Alignment.center,
+          children: [
+            const CircularProgressIndicator(
+              strokeWidth: 6,
+              value: .75,
+              color: Color.fromARGB(255, 106, 255, 7),
+              backgroundColor: Color.fromARGB(58, 88, 88, 88),    
+            ),
+            Text(
+              '100%',
+              style: Theme.of(context).textTheme.bodySmall,
+            ),
+          ]
+        ),
+        Text(
+          'Hoy',
+          style: Theme.of(context).textTheme.bodySmall,
+        )
+      ],
+    );
+  }
+
+  Widget _smallDivider(){
+    return const VerticalDivider(
+      color: Color.fromARGB(255, 0, 253, 13),
+      width: 20,
+      thickness: 2,
+      indent: 10,
+      endIndent: 0,
+    );
+  }
+
+  Widget _hydration(){
+    return Text(
+            '1.0',
+            style: Theme.of(context).textTheme.headlineSmall,
+          );
   }
 
   Widget _buttonReg(){
     return Center(
           child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-              ),
               onPressed: () {},
               child: 
                 const Text(

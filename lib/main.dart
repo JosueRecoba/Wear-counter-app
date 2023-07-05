@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wearcounterapp/screens/star_screem.dart';
 
+
 void main() {
   runApp(const MyApp());
 }
@@ -22,14 +23,23 @@ class MyApp extends StatelessWidget {
             fontWeight: FontWeight.bold
           ),
           bodyMedium: TextStyle(
-            color: Color.fromARGB(195, 0, 255, 34),
+            color: Color.fromARGB(195, 10, 237, 245),
+          ),
+          bodySmall: TextStyle(
+            color: Color.fromARGB(255, 219, 151, 5),
+            fontSize: 12,
+            fontWeight: FontWeight.bold
+          )
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.indigo,
+            foregroundColor: Colors.white
           )
         ),
         useMaterial3: true,
       ),
-      home: const StartScreen()
-
+      home: const StartScreen(),
     );
   }
 }
-
