@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 import '../assets/interval_progress_bar.dart';
+import 'drink_screen.dart';
 
 
 class StartScreen extends StatefulWidget {
@@ -160,7 +161,12 @@ class _StartScreenState extends State<StartScreen> {
             ),
             backgroundColor: const Color.fromARGB(255, 31, 15, 175),
           ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const DrinkScreen()),
+              );
+            },
             child: 
               const Text(
                 'Registrar',
