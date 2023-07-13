@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wearcounterapp/screens/star_screem.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
@@ -26,7 +25,7 @@ class MyApp extends StatelessWidget {
             color: Color.fromARGB(195, 10, 237, 245),
           ),
           bodySmall: TextStyle(
-            color: Color.fromARGB(255, 219, 151, 5),
+            color: Color.fromARGB(255, 7, 7, 7),
             fontSize: 12,
             fontWeight: FontWeight.bold
           )
